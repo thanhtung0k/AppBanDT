@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_appshop"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.appshopdidong.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_gioHang"
+            app:destination="@id/gioHangFragment2" />
+        <action
+            android:id="@+id/action_home_to_trangChinh"
+            app:destination="@id/trangChinhFragment2" />
+        <action
+            android:id="@+id/action_home_to_thongTinShop"
+            app:destination="@id/thongTinShopFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gioHangFragment2"
+        android:name="com.example.appshopdidong.fragment.GioHangFragment"
+        android:label="fragment_gio_hang"
+        tools:layout="@layout/fragment_gio_hang" />
+    <fragment
+        android:id="@+id/trangChinhFragment2"
+        android:name="com.example.appshopdidong.fragment.TrangChinhFragment"
+        android:label="fragment_trang_chinh"
+        tools:layout="@layout/fragment_trang_chinh" >
+        <action
+            android:id="@+id/action_trangChinh_to_thongTinChiTiet"
+            app:destination="@id/thongTinChiTietFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thongTinShopFragment"
+        android:name="com.example.appshopdidong.fragment.ThongTinShopFragment"
+        android:label="fragment_thong_tin_shop"
+        tools:layout="@layout/fragment_thong_tin_shop" />
+    <fragment
+        android:id="@+id/thongTinChiTietFragment"
+        android:name="com.example.appshopdidong.fragment.ThongTinChiTietFragment"
+        android:label="fragment_thong_tin_chi_tiet"
+        tools:layout="@layout/fragment_thong_tin_chi_tiet" >
+        <argument
+            android:name="idPhone"
+            app:argType="string"
+            android:defaultValue=" " />
+    </fragment>
+</navigation>
